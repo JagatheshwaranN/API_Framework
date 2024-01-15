@@ -1,4 +1,4 @@
-!!com.data.yaml.MasterTestSuite
+!!com.data.yaml.MasterTestDataSet
 masterTestSuiteDataMap:
   testSingleStudentCase1:
     - !!com.data.yaml.YamlTestDataForGetAPI {id: 1, testCategory: reg}
