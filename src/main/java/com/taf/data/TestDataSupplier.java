@@ -25,7 +25,7 @@ public class TestDataSupplier {
         MasterTestDataSet masterTestDataSet = null;
 
         try {
-            masterTestDataSet = yaml.loadAs(new FileReader(new File(TESTDATA_PATH)), MasterTestDataSet.class);
+            masterTestDataSet = yaml.loadAs(new FileReader(TESTDATA_PATH), MasterTestDataSet.class);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -34,7 +34,7 @@ public class TestDataSupplier {
 
         List<TestCategoryData> testCategoryDataList = masterTestDataSet.getMasterTestDataSetMap().get(testCaseName);
 
-        String testCaseToRun = PropertyFileReader.getPropertyData().getPropMap().get("testcases_to_be_run");
+        String testCaseToRun = PropertyFileReader.getPropertyData().getApi().get("testcases_to_be_run");
 
         System.out.println("=============== TestCase To Be Run From Category " + testCaseToRun + " ===============");
 

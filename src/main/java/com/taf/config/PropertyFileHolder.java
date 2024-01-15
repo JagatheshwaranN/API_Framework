@@ -4,20 +4,21 @@ import java.util.Map;
 
 public class PropertyFileHolder {
 
-    private Map<String, String> propMap;
+    private Map<String, String> api;
 
-    public Map<String, String> getPropMap() {
-        return propMap;
+    public Map<String, String> getApi() {
+        return api;
     }
 
-    public void setPropMap(Map<String, String> propMap) {
-        this.propMap = propMap;
+    public void setApi(Map<String, String> api) {
+        this.api = api;
     }
 
     @Override
     public String toString() {
-        return "PropertyFileHolder [" +
-                "propMap=" + propMap +
-                ']';
+        return "PropertyFileHolder{" +
+                "api=" + api +
+                '}';
     }
+
 }

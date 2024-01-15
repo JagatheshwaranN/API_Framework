@@ -1,7 +1,5 @@
-!!com.data.yaml.MasterTestDataSet
-masterTestSuiteDataMap:
+masterTestDataSetMap:
   testSingleStudentCase1:
-    - !!com.data.yaml.YamlTestDataForGetAPI {id: 1, testCategory: reg}
-
+    - {id: 1, testCategory: reg}
   testSingleStudentCase2:
-    - !!com.data.yaml.YamlTestDataForGetAPI {id: 2, testCategory: smoke}
+    - {id: 2, testCategory: smoke}
