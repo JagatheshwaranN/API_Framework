@@ -4,8 +4,6 @@ public class APITestData extends TestCategoryData {
 
     private Integer id;
 
-    private String testCategory;
-
     public Integer getId() {
         return id;
     }
@@ -18,7 +16,6 @@ public class APITestData extends TestCategoryData {
     public String toString() {
         return "APITestData [" +
                 "id=" + id +
-                ", testCategory='" + testCategory + '\'' +
                 ']';
     }
 }
