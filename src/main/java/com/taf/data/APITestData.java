@@ -1,6 +1,8 @@
 package com.taf.data;
 
-public class APITestData extends TestCategoryData {
+import java.util.Map;
+
+public class APITestData extends TestRowData {
 
     private Integer id;
 

@@ -16,8 +16,8 @@ public class SingleStudentTest {
     private static final Logger logger = LogManager.getLogger(SingleStudentTest.class);
 
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
-    public void testSingleStudentCase1(APITestData apiTestData) {
-        int id = apiTestData.getId();
+    public void testSingleStudentCase1(int id) {
+        System.out.println("Arguments: " + id);
         Student student = StudentProcess.getStudentDetail(id);
         logger.info(student);
         Assert.assertEquals(student.getId(), id);
