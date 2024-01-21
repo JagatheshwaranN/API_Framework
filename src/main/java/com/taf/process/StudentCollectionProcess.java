@@ -1,6 +1,7 @@
 package com.taf.process;
 
 import com.taf.config.PropertyFileReader;
+import com.taf.config.TestConstant;
 import com.taf.pojo.Student;
 import com.taf.pojo.StudentCollection;
 import io.restassured.RestAssured;
@@ -8,22 +9,23 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
-public class StudentListProcess {
+public class StudentCollectionProcess {
 
-    private static final Logger logger = LogManager.getLogger(StudentListProcess.class);
+    private static final Logger log = LogManager.getFormatterLogger(StudentCollectionProcess.class);
 
     public static StudentCollection getAllStudentDetail() {
-        String baseURL = PropertyFileReader.getPropertyData().getApi().get("baseURL");
-        String resource = PropertyFileReader.getPropertyData().getApi().get("resource");
+        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL);
+        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE);
         String endPoint = baseURL + resource;
-        logger.info("Endpoint to hit : " + endPoint);
+        log.info("Endpoint to hit : " + endPoint);
         Response response = RestAssured.get(endPoint);
-        List<Student> studentList = Collections.singletonList(response.getBody().as(Student.class));
+        List<Student> studentList = Arrays.asList(response.getBody().as(Student[].class));
         StudentCollection studentCollection = new StudentCollection();
         studentCollection.setStudentList(studentList);
         return studentCollection;
     }
+
 }

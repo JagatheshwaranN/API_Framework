@@ -5,21 +5,22 @@ import java.util.Map;
 
 public class MasterTestDataSet {
 
-    private Map<String, List<TestDataSet>> masterTestDataSetMap;
+    private Map<String, List<TestDataSet>> masterTestDataSet;
 
-    public Map<String, List<TestDataSet>> getMasterTestDataSetMap() {
-        return masterTestDataSetMap;
+    public Map<String, List<TestDataSet>> getMasterTestDataSet() {
+        return masterTestDataSet;
     }
 
     @SuppressWarnings("unused")
-    public void setMasterTestDataSetMap(Map<String, List<TestDataSet>> masterTestDataSetMap) {
-        this.masterTestDataSetMap = masterTestDataSetMap;
+    public void setMasterTestDataSet(Map<String, List<TestDataSet>> masterTestDataSet) {
+        this.masterTestDataSet = masterTestDataSet;
     }
 
     @Override
     public String toString() {
         return "MasterTestDataSet{" +
-                "masterTestDataSetMap=" + masterTestDataSetMap +
+                "masterTestDataSet=" + masterTestDataSet +
                 '}';
     }
+
 }

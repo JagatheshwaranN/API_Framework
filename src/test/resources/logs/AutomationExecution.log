@@ -1,0 +1,4 @@
+[INFO ] 2024-01-21 16:01:27.218 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-21 16:01:29.956 [main] StudentTest - com.taf.pojo.Student@72906e[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-21 16:04:41.998 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-21 16:04:45.287 [main] StudentTest - com.taf.pojo.Student@72906e[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]

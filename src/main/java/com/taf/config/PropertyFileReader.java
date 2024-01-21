@@ -8,15 +8,12 @@ import java.io.IOException;
 
 public class PropertyFileReader {
 
-    private static final String PROPERTY_FILE_PATH = "src/main/resources/propdata/properties.yaml";
-
     public static PropertyFileHolder getPropertyData(){
         ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
         PropertyFileHolder propertyFileHolder;
         try{
-            File file = new File(PROPERTY_FILE_PATH);
+            File file = new File(TestConstant.PROPERTY_FILE_PATH);
             propertyFileHolder = objectMapper.readValue(file, PropertyFileHolder.class);
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -11,15 +11,15 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Map;
 
-public class SingleStudentTest {
+public class StudentTest {
 
-    private static final Logger logger = LogManager.getLogger(SingleStudentTest.class);
+    private static final Logger log = LogManager.getFormatterLogger(StudentTest.class);
 
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
-    public void testSingleStudentCase1(Map<String, Object> testData) {
+    public void testStudent(Map<String, Object> testData) {
         int id = (Integer) testData.get("id");
         Student student = StudentProcess.getStudentDetail(id);
-        logger.info(student);
+        log.info(student);
         Assert.assertEquals(student.getId(), id);
         Assert.assertEquals(student.getName(), "John Doe");
         Assert.assertEquals(student.getLocation(), "New York");

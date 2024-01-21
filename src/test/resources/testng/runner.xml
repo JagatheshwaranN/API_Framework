@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Student Test Suite">
+    <test thread-count="1" name="Single Student Test">
+        <classes>
+            <class name="com.taf.testcases.StudentTest" />
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
