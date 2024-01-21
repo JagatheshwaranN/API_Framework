@@ -5,13 +5,14 @@ import java.util.Map;
 
 public class MasterTestDataSet {
 
-    private Map<String, List<TestRowData>> masterTestDataSetMap;
+    private Map<String, List<TestDataSet>> masterTestDataSetMap;
 
-    public Map<String, List<TestRowData>> getMasterTestDataSetMap() {
+    public Map<String, List<TestDataSet>> getMasterTestDataSetMap() {
         return masterTestDataSetMap;
     }
 
-    public void setMasterTestDataSetMap(Map<String, List<TestRowData>> masterTestDataSetMap) {
+    @SuppressWarnings("unused")
+    public void setMasterTestDataSetMap(Map<String, List<TestDataSet>> masterTestDataSetMap) {
         this.masterTestDataSetMap = masterTestDataSetMap;
     }
 

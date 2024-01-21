@@ -6,6 +6,7 @@ public class StudentCollection {
 
     List<Student> studentList;
 
+    @SuppressWarnings("unused")
     public List<Student> getStudentList() {
         return studentList;
     }

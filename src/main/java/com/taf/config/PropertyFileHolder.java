@@ -10,6 +10,7 @@ public class PropertyFileHolder {
         return api;
     }
 
+    @SuppressWarnings("unused")
     public void setApi(Map<String, String> api) {
         this.api = api;
     }

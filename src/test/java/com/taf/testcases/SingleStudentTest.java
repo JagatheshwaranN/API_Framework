@@ -1,6 +1,5 @@
 package com.taf.testcases;
 
-import com.taf.data.APITestData;
 import com.taf.data.TestDataSupplier;
 import com.taf.pojo.Student;
 import com.taf.process.StudentProcess;
@@ -10,14 +9,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.Map;
 
 public class SingleStudentTest {
 
     private static final Logger logger = LogManager.getLogger(SingleStudentTest.class);
 
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
-    public void testSingleStudentCase1(int id) {
-        System.out.println("Arguments: " + id);
+    public void testSingleStudentCase1(Map<String, Object> testData) {
+        int id = (Integer) testData.get("id");
         Student student = StudentProcess.getStudentDetail(id);
         logger.info(student);
         Assert.assertEquals(student.getId(), id);
@@ -26,4 +26,5 @@ public class SingleStudentTest {
         Assert.assertEquals(student.getPhone(), "123-456-7890");
         Assert.assertEquals(student.getCourses(), List.of("Mathematics", "History", "Science"));
     }
+
 }

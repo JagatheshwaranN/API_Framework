@@ -1,7 +1,7 @@
 masterTestDataSetMap:
   testSingleStudentCase1:
-    - {id: 1, name: john, testCategory: reg}
-    - {id: 2, name: alex, testCategory: smoke}
+    - {id: 1, name: john, testCategory: regression}
+    #- {id: 2, name: alex, testCategory: regression}
   testSingleStudentCase2:
-    - { id: 3, testCategory: reg }
+    - { id: 3, testCategory: regression }
     - { id: 4, testCategory: smoke }

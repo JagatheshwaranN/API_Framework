@@ -1,7 +1,5 @@
 package com.taf.config;
 
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
@@ -14,7 +12,7 @@ public class PropertyFileReader {
 
     public static PropertyFileHolder getPropertyData(){
         ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
-        PropertyFileHolder propertyFileHolder = null;
+        PropertyFileHolder propertyFileHolder;
         try{
             File file = new File(PROPERTY_FILE_PATH);
             propertyFileHolder = objectMapper.readValue(file, PropertyFileHolder.class);
@@ -24,4 +22,5 @@ public class PropertyFileReader {
         }
         return propertyFileHolder;
     }
+
 }

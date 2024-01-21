@@ -32,6 +32,7 @@ public class Student {
     }
 
     @JsonProperty("id")
+    @SuppressWarnings("unused")
     public void setId(Integer id) {
         this.id = id;
     }
@@ -42,6 +43,7 @@ public class Student {
     }
 
     @JsonProperty("name")
+    @SuppressWarnings("unused")
     public void setName(String name) {
         this.name = name;
     }
@@ -52,6 +54,7 @@ public class Student {
     }
 
     @JsonProperty("location")
+    @SuppressWarnings("unused")
     public void setLocation(String location) {
         this.location = location;
     }
@@ -62,6 +65,7 @@ public class Student {
     }
 
     @JsonProperty("phone")
+    @SuppressWarnings("unused")
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -72,6 +76,7 @@ public class Student {
     }
 
     @JsonProperty("courses")
+    @SuppressWarnings("unused")
     public void setCourses(List<String> courses) {
         this.courses = courses;
     }

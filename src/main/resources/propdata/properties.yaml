@@ -1,4 +1,4 @@
 api:
   baseURL: "http://localhost:3000"
   resource: "/students"
-  testcases_to_be_run: reg
+  testcases_to_be_run: regression
