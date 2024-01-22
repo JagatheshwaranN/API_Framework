@@ -24,8 +24,8 @@ public class StudentCollectionProcess {
         log.info("Endpoint to hit : " + endPoint);
         Response response = RestAssured.get(endPoint);
         List<Student> studentList = Arrays.asList(response.getBody().as(Student[].class));
-        ResponseUtil.validateResponseStatusCode(response);
-        ResponseUtil.validateResponseStatusLine(response);
+        ResponseUtil.validateResponseStatusCode(response, TestConstant.GET.getValue());
+        ResponseUtil.validateResponseStatusLine(response, TestConstant.GET.getValue());
         ResponseUtil.validateResponseContentType(response);
         ResponseUtil.validateResponseHeaders(response);
         ResponseUtil.validateResponseCookies(response);

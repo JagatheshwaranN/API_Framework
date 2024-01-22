@@ -5,6 +5,7 @@ import com.taf.config.TestConstant;
 import com.taf.pojo.Student;
 import com.taf.util.ResponseUtil;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,9 +19,9 @@ public class StudentProcess {
         String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
         String endPoint = baseURL + resource + "/" + id;
         log.info("Endpoint to hit : " + endPoint);
-        Response response = RestAssured.get(endPoint);
-        ResponseUtil.validateResponseStatusCode(response);
-        ResponseUtil.validateResponseStatusLine(response);
+        Response response = RestAssured.given().get(endPoint);
+        ResponseUtil.validateResponseStatusCode(response, TestConstant.GET.getValue());
+        ResponseUtil.validateResponseStatusLine(response, TestConstant.GET.getValue());
         ResponseUtil.validateResponseContentType(response);
         ResponseUtil.validateResponseHeaders(response);
         ResponseUtil.validateResponseCookies(response);
@@ -32,12 +33,15 @@ public class StudentProcess {
         String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
         String endPoint = baseURL + resource;
         log.info("Endpoint to hit : " + endPoint);
-        Response response = RestAssured.post(endPoint);
-//        ResponseUtil.validateResponseStatusCode(response);
-//        ResponseUtil.validateResponseStatusLine(response);
-//        ResponseUtil.validateResponseContentType(response);
-//        ResponseUtil.validateResponseHeaders(response);
-//        ResponseUtil.validateResponseCookies(response);
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(student)
+                .post(endPoint);
+        ResponseUtil.validateResponseStatusCode(response, TestConstant.POST.getValue());
+        ResponseUtil.validateResponseStatusLine(response, TestConstant.POST.getValue());
+        ResponseUtil.validateResponseContentType(response);
+        ResponseUtil.validateResponseHeaders(response);
+        ResponseUtil.validateResponseCookies(response);
         return response.getBody().as(Student.class);
     }
 

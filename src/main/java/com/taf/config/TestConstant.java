@@ -12,7 +12,15 @@ public enum TestConstant {
 
     PROPERTY_FILE_PATH("src/main/resources/propdata/properties.yaml"),
 
-    TESTDATA_FILE_PATH("src/main/resources/testdata/master-testdata.yaml");
+    TESTDATA_FILE_PATH("src/main/resources/testdata/master-testdata.yaml"),
+
+    GET("get"),
+
+    POST("post"),
+
+    PUT("put"),
+
+    DELETE("delete");
 
     private final String value;
 

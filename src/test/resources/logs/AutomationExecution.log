@@ -21,3 +21,19 @@
 [INFO ] 2024-01-22 15:44:10.424 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
 [INFO ] 2024-01-22 15:44:13.067 [main] StudentTest - Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
 [INFO ] 2024-01-22 16:57:26.106 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 18:13:09.258 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 18:13:11.940 [main] RetrieveStudentTest - Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 18:21:56.808 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 18:22:00.249 [main] CreateStudentTest - Student[id=4,name=<null>,location=<null>,phone=<null>,courses=<null>]
+[INFO ] 2024-01-22 18:25:44.042 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 18:25:46.949 [main] CreateStudentTest - Student[id=5,name=<null>,location=<null>,phone=<null>,courses=<null>]
+[INFO ] 2024-01-22 18:27:28.136 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 18:27:30.983 [main] CreateStudentTest - Student[id=6,name=<null>,location=<null>,phone=<null>,courses=<null>]
+[INFO ] 2024-01-22 18:53:49.304 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 18:53:52.812 [main] CreateStudentTest - Student[id=7,name=Jane Doe,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-22 19:26:44.355 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 19:26:47.240 [main] CreateStudentTest - Student[id=4,name=Jane Doe,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-22 19:37:11.839 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 19:37:14.523 [main] RetrieveStudentTest - Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 19:37:14.544 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 19:37:14.817 [main] CreateStudentTest - Student[id=5,name=Jane Doe,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]

@@ -14,13 +14,14 @@ public class CreateStudentTest {
 
     private static final Logger log = LogManager.getFormatterLogger(CreateStudentTest.class);
 
+    @SuppressWarnings("unchecked")
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
     public void testCreateStudent(Map<String, Object> testData) {
         Student studentData = new Student();
         studentData.setName((String) testData.get("name"));
         studentData.setLocation((String) testData.get("location"));
         studentData.setPhone((String) testData.get("phone"));
-        studentData.setCourses(List.of(testData.get("courses").toString()));
+        studentData.setCourses((List<String>) testData.get("courses"));
         Student student = StudentProcess.postStudentDetail(studentData);
         log.info(student);
     }

@@ -4,6 +4,7 @@
     <test thread-count="1" name="Single Student Test">
         <classes>
             <class name="com.taf.testcases.RetrieveStudentTest" />
+            <class name="com.taf.testcases.CreateStudentTest" />
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
