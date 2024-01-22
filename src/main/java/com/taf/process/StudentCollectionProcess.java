@@ -18,8 +18,8 @@ public class StudentCollectionProcess {
     private static final Logger log = LogManager.getFormatterLogger(StudentCollectionProcess.class);
 
     public static StudentCollection getAllStudentDetail() {
-        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL);
-        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE);
+        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL.getValue());
+        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
         String endPoint = baseURL + resource;
         log.info("Endpoint to hit : " + endPoint);
         Response response = RestAssured.get(endPoint);

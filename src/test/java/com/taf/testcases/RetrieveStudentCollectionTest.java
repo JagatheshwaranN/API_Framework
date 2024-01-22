@@ -11,12 +11,12 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 
-public class StudentCollectionTest {
+public class RetrieveStudentCollectionTest {
 
-    private static final Logger log = LogManager.getFormatterLogger(StudentCollectionTest.class);
+    private static final Logger log = LogManager.getFormatterLogger(RetrieveStudentCollectionTest.class);
 
     @Test(enabled = false)
-    public void testStudentCollection() {
+    public void testRetrieveStudentCollection() {
         StudentCollection studentCollection = StudentCollectionProcess.getAllStudentDetail();
         log.info(studentCollection);
         List<Student> studentList = studentCollection.getStudentList();

@@ -12,7 +12,7 @@ public class PropertyFileReader {
         ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
         PropertyFileHolder propertyFileHolder;
         try{
-            File file = new File(TestConstant.PROPERTY_FILE_PATH);
+            File file = new File(TestConstant.PROPERTY_FILE_PATH.getValue());
             propertyFileHolder = objectMapper.readValue(file, PropertyFileHolder.class);
         } catch (IOException e) {
             throw new RuntimeException(e);

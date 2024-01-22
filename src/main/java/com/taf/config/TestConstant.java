@@ -1,17 +1,27 @@
 package com.taf.config;
 
-public class TestConstant {
+public enum TestConstant {
 
-    public static final String BASE_URL = "base_url";
+    BASE_URL("base_url"),
 
-    public static final String RESOURCE = "resource";
+    RESOURCE("resource"),
 
-    public static final String TEST_CASE_RUN = "testcases_to_be_run";
+    TEST_CASE_RUN("testcases_to_be_run"),
 
-    public static final String TEST_CATEGORY = "testCategory";
+    TEST_CATEGORY("testCategory"),
 
-    public static final String PROPERTY_FILE_PATH = "src/main/resources/propdata/properties.yaml";
+    PROPERTY_FILE_PATH("src/main/resources/propdata/properties.yaml"),
 
-    public static final String TESTDATA_FILE_PATH = "src/main/resources/testdata/master-testdata.yaml";
+    TESTDATA_FILE_PATH("src/main/resources/testdata/master-testdata.yaml");
+
+    private final String value;
+
+    TestConstant(String value){
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
 
 }

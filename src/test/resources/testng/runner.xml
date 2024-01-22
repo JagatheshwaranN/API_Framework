@@ -3,7 +3,7 @@
 <suite name="Student Test Suite">
     <test thread-count="1" name="Single Student Test">
         <classes>
-            <class name="com.taf.testcases.StudentTest" />
+            <class name="com.taf.testcases.RetrieveStudentTest" />
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

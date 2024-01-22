@@ -20,19 +20,19 @@ public class TestDataSupplier {
         Yaml yaml = new Yaml();
         MasterTestDataSet masterTestDataSet;
         try {
-            masterTestDataSet = yaml.loadAs(new FileReader(TestConstant.TESTDATA_FILE_PATH), MasterTestDataSet.class);
+            masterTestDataSet = yaml.loadAs(new FileReader(TestConstant.TESTDATA_FILE_PATH.getValue()), MasterTestDataSet.class);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
         String testCaseName = method.getName();
         List<TestDataSet> testCaseDataList = masterTestDataSet.getMasterTestDataSet().get(testCaseName);
-        String testCaseToRun = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.TEST_CASE_RUN);
+        String testCaseToRun = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.TEST_CASE_RUN.getValue());
         System.out.println("=============== TestCase To Be Run From Category " + testCaseToRun + " ===============");
         List<Object> dataset = new ArrayList<>(testCaseDataList);
         List<Map<String, Object>> executionTestData = dataset.stream()
                 .filter(element -> element instanceof Map)
                 .map(element -> (Map<String, Object>) element)
-                .filter(map -> testCaseToRun.equals(map.get(TestConstant.TEST_CATEGORY)))
+                .filter(map -> testCaseToRun.equals(map.get(TestConstant.TEST_CATEGORY.getValue())))
                 .toList();
         Object[][] data = new Object[executionTestData.size()][1];
         for (int i = 0; i < executionTestData.size(); i++) {

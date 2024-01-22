@@ -14,8 +14,8 @@ public class StudentProcess {
     private static final Logger log = LogManager.getFormatterLogger(StudentProcess.class);
 
     public static Student getStudentDetail(int id) {
-        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL);
-        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE);
+        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL.getValue());
+        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
         String endPoint = baseURL + resource + "/" + id;
         log.info("Endpoint to hit : " + endPoint);
         Response response = RestAssured.get(endPoint);
@@ -24,6 +24,20 @@ public class StudentProcess {
         ResponseUtil.validateResponseContentType(response);
         ResponseUtil.validateResponseHeaders(response);
         ResponseUtil.validateResponseCookies(response);
+        return response.getBody().as(Student.class);
+    }
+
+    public static Student postStudentDetail(Student student) {
+        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL.getValue());
+        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
+        String endPoint = baseURL + resource;
+        log.info("Endpoint to hit : " + endPoint);
+        Response response = RestAssured.post(endPoint);
+//        ResponseUtil.validateResponseStatusCode(response);
+//        ResponseUtil.validateResponseStatusLine(response);
+//        ResponseUtil.validateResponseContentType(response);
+//        ResponseUtil.validateResponseHeaders(response);
+//        ResponseUtil.validateResponseCookies(response);
         return response.getBody().as(Student.class);
     }
 

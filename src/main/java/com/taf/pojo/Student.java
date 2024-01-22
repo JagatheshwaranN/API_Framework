@@ -1,6 +1,8 @@
 package com.taf.pojo;
 
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -16,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Student {
 
     @JsonProperty("id")
+    @JsonIgnore
     private Integer id;
     @JsonProperty("name")
     private String name;

@@ -10,12 +10,12 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-public class StudentTest {
+public class RetrieveStudentTest {
 
-    private static final Logger log = LogManager.getFormatterLogger(StudentTest.class);
+    private static final Logger log = LogManager.getFormatterLogger(RetrieveStudentTest.class);
 
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
-    public void testStudent(Map<String, Object> testData) {
+    public void testRetrieveStudent(Map<String, Object> testData) {
         int id = (Integer) testData.get("id");
         Student student = StudentProcess.getStudentDetail(id);
         log.info(student);
