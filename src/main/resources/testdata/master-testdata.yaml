@@ -1,7 +1,7 @@
 masterTestDataSet:
   testStudent:
-    - {id: 1, name: john, testCategory: regression}
-    #- {id: 2, name: alex, testCategory: regression}
+    - {id: 1, name: John Doe, location: New York, phone: 123-456-7890, testCategory: regression}
+    #- {id: 2, name: Alice Smith, location: Los Angeles, phone: 987-654-3210, testCategory: regression}
   testStudentCollection:
     - { id: 3, testCategory: regression }
     - { id: 4, testCategory: smoke }

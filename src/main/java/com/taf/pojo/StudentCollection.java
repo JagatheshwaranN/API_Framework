@@ -18,7 +18,7 @@ public class StudentCollection {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(StudentCollection.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append("Student Collection").append('[');
         sb.append("All Students");
         sb.append('=');
         sb.append(((this.studentList == null)?"<null>":this.studentList));

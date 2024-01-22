@@ -2,3 +2,19 @@
 [INFO ] 2024-01-21 16:01:29.956 [main] StudentTest - com.taf.pojo.Student@72906e[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
 [INFO ] 2024-01-21 16:04:41.998 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
 [INFO ] 2024-01-21 16:04:45.287 [main] StudentTest - com.taf.pojo.Student@72906e[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 15:04:04.958 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 15:04:11.182 [main] StudentTest - com.taf.pojo.Student@5a1f778[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 15:04:11.206 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/2
+[INFO ] 2024-01-22 15:04:11.260 [main] StudentTest - com.taf.pojo.Student@6418e39e[id=2,name=Alice Smith,location=Los Angeles,phone=987-654-3210,courses=[English, Art, Physics]]
+[INFO ] 2024-01-22 15:17:32.445 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 15:17:35.121 [main] StudentTest - com.taf.pojo.Student@1f87607c[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 15:25:11.541 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 15:25:52.250 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 15:26:38.265 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 15:26:40.921 [main] StudentTest - com.taf.pojo.Student@5482bcac[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 15:28:49.220 [main] StudentCollectionProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 15:28:52.327 [main] StudentCollectionTest - com.taf.pojo.StudentCollection@314a31b0[All Students=[com.taf.pojo.Student@2753316c[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]], com.taf.pojo.Student@59edb4f5[id=2,name=Alice Smith,location=Los Angeles,phone=987-654-3210,courses=[English, Art, Physics]], com.taf.pojo.Student@2792b416[id=3,name=Bob Johnson,location=Chicago,phone=555-123-4567,courses=[Computer Science, Chemistry, Geography]]]]
+[INFO ] 2024-01-22 15:32:39.315 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-22 15:32:41.890 [main] StudentTest - Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-22 15:33:11.144 [main] StudentCollectionProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-22 15:33:13.818 [main] StudentCollectionTest - Student Collection[All Students=[Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]], Student[id=2,name=Alice Smith,location=Los Angeles,phone=987-654-3210,courses=[English, Art, Physics]], Student[id=3,name=Bob Johnson,location=Chicago,phone=555-123-4567,courses=[Computer Science, Chemistry, Geography]]]]

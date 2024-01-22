@@ -3,6 +3,7 @@ package com.taf.process;
 import com.taf.config.PropertyFileReader;
 import com.taf.config.TestConstant;
 import com.taf.pojo.Student;
+import com.taf.util.ResponseUtil;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +19,11 @@ public class StudentProcess {
         String endPoint = baseURL + resource + "/" + id;
         log.info("Endpoint to hit : " + endPoint);
         Response response = RestAssured.get(endPoint);
+        ResponseUtil.validateResponseStatusCode(response);
+        ResponseUtil.validateResponseStatusLine(response);
+        ResponseUtil.validateResponseContentType(response);
+        ResponseUtil.validateResponseHeaders(response);
+        ResponseUtil.validateResponseCookies(response);
         return response.getBody().as(Student.class);
     }
 

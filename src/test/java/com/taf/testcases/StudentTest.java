@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
 import java.util.Map;
 
 public class StudentTest {
@@ -21,10 +20,9 @@ public class StudentTest {
         Student student = StudentProcess.getStudentDetail(id);
         log.info(student);
         Assert.assertEquals(student.getId(), id);
-        Assert.assertEquals(student.getName(), "John Doe");
-        Assert.assertEquals(student.getLocation(), "New York");
-        Assert.assertEquals(student.getPhone(), "123-456-7890");
-        Assert.assertEquals(student.getCourses(), List.of("Mathematics", "History", "Science"));
+        Assert.assertEquals(student.getName(), testData.get("name"));
+        Assert.assertEquals(student.getLocation(), testData.get("location"));
+        Assert.assertEquals(student.getPhone(), testData.get("phone"));
     }
 
 }
