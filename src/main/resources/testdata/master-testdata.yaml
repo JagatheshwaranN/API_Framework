@@ -1,15 +1,4 @@
 masterTestDataSet:
-  testRetrieveStudent:
-    - id: 1
-      name: John Doe
-      location: New York
-      phone: 123-456-7890
-      testCategory: regression
-      courses:
-        - Mathematics
-        - History
-        - Science
-
   testCreateStudent:
     - name: Jean Smith
       location: Los Angeles
@@ -19,3 +8,29 @@ masterTestDataSet:
         - Physics
         - Literature
         - Geography
+
+  testRetrieveStudent:
+    - id: 3
+      name: Jean Smith
+      location: Los Angeles
+      phone: 987-654-3210
+      testCategory: regression
+      courses:
+        - Physics
+        - Literature
+        - Geography
+
+  testUpdateStudent:
+    - id: 3
+      name: Jean Smith
+      location: Los Angeles
+      phone: 987-654-3210
+      testCategory: regression
+      courses:
+        - Physics
+        - Mathematics
+        - Geography
+
+  testDeleteStudent:
+    - id: 3
+      testCategory: regression

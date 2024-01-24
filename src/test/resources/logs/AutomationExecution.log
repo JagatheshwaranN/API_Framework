@@ -37,3 +37,32 @@
 [INFO ] 2024-01-22 19:37:14.523 [main] RetrieveStudentTest - Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
 [INFO ] 2024-01-22 19:37:14.544 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
 [INFO ] 2024-01-22 19:37:14.817 [main] CreateStudentTest - Student[id=5,name=Jane Doe,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-24 14:46:38.995 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-24 14:47:32.842 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-24 14:49:46.004 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-24 14:50:40.683 [main] RetrieveStudentTest - Student[id=1,name=John Doe,location=New York,phone=123-456-7890,courses=[Mathematics, History, Science]]
+[INFO ] 2024-01-24 14:51:19.349 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-24 14:51:22.793 [main] CreateStudentTest - Student[id=4,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-24 14:51:44.932 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/4
+[INFO ] 2024-01-24 14:52:46.347 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/4
+[INFO ] 2024-01-24 14:52:49.704 [main] UpdateStudentTest - Student[id=4,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Mathematics, Geography]]
+[INFO ] 2024-01-24 15:04:01.523 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/4
+[INFO ] 2024-01-24 15:09:30.580 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/2
+[INFO ] 2024-01-24 15:14:43.838 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/1
+[INFO ] 2024-01-24 15:14:46.777 [main] DeleteStudentTest - {}
+[INFO ] 2024-01-24 15:21:53.418 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-24 15:21:56.660 [main] CreateStudentTest - Student[id=3,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-24 15:21:56.682 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/3
+[INFO ] 2024-01-24 15:21:56.754 [main] RetrieveStudentTest - Student[id=3,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-24 15:21:56.770 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/3
+[INFO ] 2024-01-24 15:21:56.816 [main] UpdateStudentTest - Student[id=3,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Mathematics, Geography]]
+[INFO ] 2024-01-24 15:21:56.838 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/3
+[INFO ] 2024-01-24 15:21:56.951 [main] DeleteStudentTest - {}
+[INFO ] 2024-01-24 15:27:42.977 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students
+[INFO ] 2024-01-24 15:27:46.095 [main] CreateStudentTest - Student[id=3,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-24 15:27:46.117 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/3
+[INFO ] 2024-01-24 15:27:46.190 [main] RetrieveStudentTest - Student[id=3,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Literature, Geography]]
+[INFO ] 2024-01-24 15:27:46.207 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/3
+[INFO ] 2024-01-24 15:27:46.289 [main] UpdateStudentTest - Student[id=3,name=Jean Smith,location=Los Angeles,phone=987-654-3210,courses=[Physics, Mathematics, Geography]]
+[INFO ] 2024-01-24 15:27:46.305 [main] StudentProcess - Endpoint to hit : http://localhost:3000/students/3
+[INFO ] 2024-01-24 15:27:46.400 [main] DeleteStudentTest - {}

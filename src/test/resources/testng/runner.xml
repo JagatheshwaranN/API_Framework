@@ -3,8 +3,10 @@
 <suite name="Student Test Suite">
     <test thread-count="1" name="Single Student Test">
         <classes>
-            <class name="com.taf.testcases.RetrieveStudentTest" />
-            <class name="com.taf.testcases.CreateStudentTest" />
+            <class name="com.taf.testcases.CreateStudentTest"/>
+            <class name="com.taf.testcases.RetrieveStudentTest"/>
+            <class name="com.taf.testcases.UpdateStudentTest"/>
+            <class name="com.taf.testcases.DeleteStudentTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

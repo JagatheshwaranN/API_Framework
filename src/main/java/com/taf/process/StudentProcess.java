@@ -1,5 +1,6 @@
 package com.taf.process;
 
+import com.google.gson.JsonObject;
 import com.taf.config.PropertyFileReader;
 import com.taf.config.TestConstant;
 import com.taf.pojo.Student;
@@ -14,23 +15,11 @@ public class StudentProcess {
 
     private static final Logger log = LogManager.getFormatterLogger(StudentProcess.class);
 
-    public static Student getStudentDetail(int id) {
-        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL.getValue());
-        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
-        String endPoint = baseURL + resource + "/" + id;
-        log.info("Endpoint to hit : " + endPoint);
-        Response response = RestAssured.given().get(endPoint);
-        ResponseUtil.validateResponseStatusCode(response, TestConstant.GET.getValue());
-        ResponseUtil.validateResponseStatusLine(response, TestConstant.GET.getValue());
-        ResponseUtil.validateResponseContentType(response);
-        ResponseUtil.validateResponseHeaders(response);
-        ResponseUtil.validateResponseCookies(response);
-        return response.getBody().as(Student.class);
-    }
+    private static final String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL.getValue());
 
-    public static Student postStudentDetail(Student student) {
-        String baseURL = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.BASE_URL.getValue());
-        String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
+    private static final String resource = PropertyFileReader.getPropertyData().getApiDetail().get(TestConstant.RESOURCE.getValue());
+
+    public static Student createStudentDetail(Student student) {
         String endPoint = baseURL + resource;
         log.info("Endpoint to hit : " + endPoint);
         Response response = RestAssured.given()
@@ -42,7 +31,50 @@ public class StudentProcess {
         ResponseUtil.validateResponseContentType(response);
         ResponseUtil.validateResponseHeaders(response);
         ResponseUtil.validateResponseCookies(response);
+        response.prettyPrint();
         return response.getBody().as(Student.class);
+    }
+
+    public static Student retrieveStudentDetail(int id) {
+        String endPoint = baseURL + resource + "/" + id;
+        log.info("Endpoint to hit : " + endPoint);
+        Response response = RestAssured.given().get(endPoint);
+        ResponseUtil.validateResponseStatusCode(response, TestConstant.GET.getValue());
+        ResponseUtil.validateResponseStatusLine(response, TestConstant.GET.getValue());
+        ResponseUtil.validateResponseContentType(response);
+        ResponseUtil.validateResponseHeaders(response);
+        ResponseUtil.validateResponseCookies(response);
+        response.prettyPrint();
+        return response.getBody().as(Student.class);
+    }
+
+    public static Student updateStudentDetail(int id, Student student) {
+        String endPoint = baseURL + resource + "/" + id;
+        log.info("Endpoint to hit : " + endPoint);
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(student)
+                .put(endPoint);
+        ResponseUtil.validateResponseStatusCode(response, TestConstant.PUT.getValue());
+        ResponseUtil.validateResponseStatusLine(response, TestConstant.PUT.getValue());
+        ResponseUtil.validateResponseContentType(response);
+        ResponseUtil.validateResponseHeaders(response);
+        ResponseUtil.validateResponseCookies(response);
+        response.prettyPrint();
+        return response.getBody().as(Student.class);
+    }
+
+    public static JsonObject deleteStudentDetail(int id) {
+        String endPoint = baseURL + resource + "/" + id;
+        log.info("Endpoint to hit : " + endPoint);
+        Response response = RestAssured.given().delete(endPoint);
+        ResponseUtil.validateResponseStatusCode(response, TestConstant.DELETE.getValue());
+        ResponseUtil.validateResponseStatusLine(response, TestConstant.DELETE.getValue());
+        ResponseUtil.validateResponseContentType(response);
+        ResponseUtil.validateResponseHeaders(response);
+        ResponseUtil.validateResponseCookies(response);
+        response.prettyPrint();
+        return response.getBody().as(JsonObject.class);
     }
 
 }

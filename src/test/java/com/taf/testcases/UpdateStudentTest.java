@@ -11,21 +11,22 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Map;
 
-public class CreateStudentTest {
+public class UpdateStudentTest {
 
-    private static final Logger log = LogManager.getFormatterLogger(CreateStudentTest.class);
+    private static final Logger log = LogManager.getFormatterLogger(UpdateStudentTest.class);
 
     @SuppressWarnings("unchecked")
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
-    public void testCreateStudent(Map<String, Object> testData) {
+    public void testUpdateStudent(Map<String, Object> testData) {
+        int id = (Integer) testData.get("id");
         Student studentData = new Student();
         studentData.setName((String) testData.get("name"));
         studentData.setLocation((String) testData.get("location"));
         studentData.setPhone((String) testData.get("phone"));
         studentData.setCourses((List<String>) testData.get("courses"));
-        Student student = StudentProcess.createStudentDetail(studentData);
+        Student student = StudentProcess.updateStudentDetail(id, studentData);
         log.info(student);
-        Assert.assertNotNull(student.getId());
+        Assert.assertEquals(student.getId(), id);
         Assert.assertEquals(student.getName(), testData.get("name"));
         Assert.assertEquals(student.getLocation(), testData.get("location"));
         Assert.assertEquals(student.getPhone(), testData.get("phone"));

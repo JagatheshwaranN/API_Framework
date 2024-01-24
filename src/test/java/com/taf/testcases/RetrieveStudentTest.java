@@ -17,12 +17,13 @@ public class RetrieveStudentTest {
     @Test(dataProvider = "test_data_supplier", dataProviderClass = TestDataSupplier.class)
     public void testRetrieveStudent(Map<String, Object> testData) {
         int id = (Integer) testData.get("id");
-        Student student = StudentProcess.getStudentDetail(id);
+        Student student = StudentProcess.retrieveStudentDetail(id);
         log.info(student);
         Assert.assertEquals(student.getId(), id);
         Assert.assertEquals(student.getName(), testData.get("name"));
         Assert.assertEquals(student.getLocation(), testData.get("location"));
         Assert.assertEquals(student.getPhone(), testData.get("phone"));
+        Assert.assertEquals(student.getCourses(), testData.get("courses"));
     }
 
 }
