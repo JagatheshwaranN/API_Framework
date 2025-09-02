@@ -15,7 +15,7 @@
     <testng.version>7.9.0</testng.version>
     <restassured.version>5.4.0</restassured.version>
     <jackson.version>2.16.1</jackson.version>
-    <commonlang.version>3.14.0</commonlang.version>
+    <commonlang.version>3.18.0</commonlang.version>
     <log4jcore.version>2.20.0</log4jcore.version>
     <maven.version>3.2.5</maven.version>
     <gson.version>2.10.1</gson.version>
